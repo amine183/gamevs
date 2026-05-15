@@ -580,6 +580,23 @@ async function showResults(game1, game2) {
 
     document.getElementById('winnerName').textContent = winner.name;
     document.getElementById('winnerReason').textContent = t.winnerReason(winner.name, t.categories[bestCat]);
+    document.getElementById('winnerName').textContent = winner.name;
+document.getElementById('winnerReason').textContent = t.winnerReason(winner.name, t.categories[bestCat]);
+
+// Amazon buy buttons
+const amazonLink1 = `https://www.amazon.com/s?k=${encodeURIComponent(game1.name)}+game&tag=gamevs-20`;
+const amazonLink2 = `https://www.amazon.com/s?k=${encodeURIComponent(game2.name)}+game&tag=gamevs-20`;
+
+document.getElementById('buyButtons').innerHTML = `
+    <div class="buy-buttons-container">
+        <a href="${amazonLink1}" target="_blank" class="buy-btn red-buy">
+            🛒 Buy ${game1.name} on Amazon
+        </a>
+        <a href="${amazonLink2}" target="_blank" class="buy-btn green-buy">
+            🛒 Buy ${game2.name} on Amazon
+        </a>
+    </div>
+`;
 
     const grid = document.getElementById('comparisonGrid');
     grid.innerHTML = cats.map(cat => `

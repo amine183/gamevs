@@ -1020,3 +1020,34 @@ body.rtl .lang-switcher { right: auto; left: 20px; }
         background: linear-gradient(to bottom, transparent, rgba(5,5,8,0.95));
     }
 }
+
+.buy-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.buy-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s;
+}
+
+.buy-btn:hover {
+    transform: scale(1.05);
+}
+
+.red-buy {
+    background: #ff2d55;
+    color: white;
+}
+
+.green-buy {
+    background: #00ff88;
+    color: black;
+}

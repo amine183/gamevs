@@ -587,14 +587,29 @@ document.getElementById('winnerReason').textContent = t.winnerReason(winner.name
 const amazonLink1 = `https://www.amazon.com/s?k=${encodeURIComponent(game1.name)}+game&tag=gamevs-20`;
 const amazonLink2 = `https://www.amazon.com/s?k=${encodeURIComponent(game2.name)}+game&tag=gamevs-20`;
 
+const kinguinLink1 = `https://www.kinguin.net/catalogsearch/result/?q=${encodeURIComponent(game1.name)}`;
+const kinguinLink2 = `https://www.kinguin.net/catalogsearch/result/?q=${encodeURIComponent(game2.name)}`;
+
 document.getElementById('buyButtons').innerHTML = `
     <div class="buy-buttons-container">
-        <a href="${amazonLink1}" target="_blank" class="buy-btn red-buy">
-            🛒 Buy ${game1.name} on Amazon
-        </a>
-        <a href="${amazonLink2}" target="_blank" class="buy-btn green-buy">
-            🛒 Buy ${game2.name} on Amazon
-        </a>
+        <div class="buy-game-box">
+            <p style="color:#ff2d55;font-weight:bold">${game1.name}</p>
+            <a href="${amazonLink1}" target="_blank" class="buy-btn amazon-btn">
+                🛒 Buy on Amazon
+            </a>
+            <a href="${kinguinLink1}" target="_blank" class="buy-btn kinguin-btn">
+                🎮 Buy on Kinguin
+            </a>
+        </div>
+        <div class="buy-game-box">
+            <p style="color:#00ff88;font-weight:bold">${game2.name}</p>
+            <a href="${amazonLink2}" target="_blank" class="buy-btn amazon-btn">
+                🛒 Buy on Amazon
+            </a>
+            <a href="${kinguinLink2}" target="_blank" class="buy-btn kinguin-btn">
+                🎮 Buy on Kinguin
+            </a>
+        </div>
     </div>
 `;
 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVS - Ultimate Game Comparator</title>
+    <link href="https://fonts.googleapis.com/css2?family=0rbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cinematic Background-->
+     <div class="bg-particles" id="particles"></div>
+     <div class="overlay"></div>
+
+    <!-- Language Switcher -->
+     <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('ar')">AR</button>
+     </div>
+
+    <!-- Header -->
+      <header class="header">
+        <div class="logo">
+           <span class="logo-game">Game</span>
+              <span class="logo-vs">VS</span> 
+        </div>
+        <p class="tagline" data-i18n="tagline">Ultimate Game Comparator</p>
+      </header>
+
+      <!-- Game of the Day -->
+<div class="gotd-section" id="gotdSection">
+    <div class="gotd-label">🎮 GAME OF THE DAY</div>
+    <div class="gotd-card" id="gotdCard">
+        <div class="gotd-image-container">
+            <img id="gotdImage" src="" alt="Game of the Day" class="gotd-image">
+            <div class="gotd-image-overlay"></div>
+        </div>
+        <div class="gotd-info">
+            <div class="gotd-date" id="gotdDate"></div>
+            <h2 class="gotd-title" id="gotdTitle">Loading...</h2>
+            <div class="gotd-stats" id="gotdStats"></div>
+            <button class="gotd-battle-btn" id="gotdBattleBtn">
+                ⚔️ USE IN BATTLE
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- Main Content -->
+     <main class="main-container">
+
+       <!-- VS Arena -->
+        <div class="arena">
+
+           <!-- Game 1 -->
+            <div class="game-card" id="game1-card">
+                <div class="card-glow red-glow"></div>
+                <div class="card-number">01</div>
+                 <div class="image-upload-area" id="upload1" onclick="document.getElementById('img1').click()">
+                   <i class="fas fa-gamepad upload-icon"></i>
+                   <p data-i18n="uploadOrSearch">Upload or Search</p>
+                   <input type="file" id="img1" accept="image/*" hidden onchange="previewImage(this, 'preview1')">
+                   <img id="preview1" class="preview-img" src="" alt="">     
+         </div>
+            <div class="search-container"> 
+               <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search1" class="search-input" placeholder="Type game name..."
+                     data-i18n-placeholder="searchPlaceholder" 
+                     oninput="showSuggestions(this, 'suggestions1')"
+                     onblur="hideSuggestions('suggestions1')">
+                </div>
+                <div class="suggestions-box" id="suggestions1"></div>
+            </div>
+            </div>
+
+              <!-- VS Badge -->
+                <div class="vs-badge">
+                    <div class="vs-ring"></div>
+                    <div class="vs-ring2"></div>
+                    <span>VS</span>
+                </div>
+
+                <!-- Game 2 -->
+            <div class="game-card" id="game2-card">
+                <div class="card-glow green-glow"></div>
+                <div class="card-number">02</div>
+                 <div class="image-upload-area" id="upload2" onclick="document.getElementById('img2').click()">
+                   <i class="fas fa-gamepad upload-icon"></i>
+                   <p data-i18n="uploadOrSearch">Upload or Search</p>
+                   <input type="file" id="img2" accept="image/*" hidden onchange="previewImage(this, 'preview2')">
+                   <img id="preview2" class="preview-img" src="" alt="">
+            </div>
+            <div class="search-container"> 
+               <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search2" class="search-input" placeholder="Type game name..."
+                     data-i18n-placeholder="searchPlaceholder" 
+                     oninput="showSuggestions(this, 'suggestions2')"
+                     onblur="hideSuggestions('suggestions2')">
+                </div>
+                <div class="suggestions-box" id="suggestions2"></div>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- Compare Button -->
+         <button class="compare-btn" onclick="compareGames()" onmouseenter="playHoverSound()" id="compareBtn">
+         <span class="btn-text" data-i18n="compareBtn">⚔️ START BATTLE</span>
+            <div class="btn-glow"></div>
+         </button>
+         <button class="reset-btn" onclick="resetBattle()" id="resetBtn" style="display:none;">
+    🔄 RESET BATTLE
+</button>
+
+         <!-- Results Section -->
+         <div class="results-section" id="results" style="display:none;">
+
+            <!-- Winner Banner-->
+                <div class="winner-banner" id="winnerBanner">
+                    <div class="winner-glow">👑</div>
+                    <h2 class="winner-title" data-i18n="winnerTitle">WINNER</h2>
+                    <h1 class="winner-name" id="winnerName"></h1>
+                    <p class="winner-reason" id="winnerReason"></p>             
+                </div>
+
+            <!-- Comparison table -->
+                <div class="comparison-grid" id="comparisonGrid"></div>
+
+                <!-- Radar Chart -->
+                <div class="chart-container">
+                    <h3 class="chart-title" data-i18n="statsTitle">📊 BATTLE STATS</h3>
+                    <canvas id="radarChart"></canvas>
+                </div>
+            
+
+            <!-- AI Verdict -->
+<div class="verdict-box" id="verdictBox">
+    <div class="ai-verdict-header">
+        <h3>🤖 AI VERDICT</h3>
+        <div class="ai-badge">Powered by Claude AI</div>
+    </div>
+    <div class="ai-loading" id="aiLoading">
+        <div class="ai-dots">
+            <span></span><span></span><span></span>
+        </div>
+        <p>AI is analyzing the battle...</p>
+    </div>
+    <p id="verdictText" class="ai-verdict-text"></p>
+</div>
+
+                </div>
+                <!-- Comment Section -->
+<div class="comments-section" id="commentsSection">
+    <div class="comments-header">
+        <h3 class="comments-title">💬 <span data-i18n="commentsTitle">BATTLE COMMENTS</span></h3>
+        <span class="comments-count" id="commentsCount">0 comments</span>
+    </div>
+
+    <!-- Add Comment -->
+    <div class="comment-form">
+        <div class="comment-form-top">
+            <input type="text" id="commentName" class="comment-input" placeholder="Your name..." maxlength="30">
+            <div class="comment-rating-select">
+                <span>Rate the battle:</span>
+                <div class="star-select" id="starSelect">
+                    <span class="star-opt" data-val="1">⭐</span>
+                    <span class="star-opt" data-val="2">⭐</span>
+                    <span class="star-opt" data-val="3">⭐</span>
+                    <span class="star-opt" data-val="4">⭐</span>
+                    <span class="star-opt" data-val="5">⭐</span>
+                </div>
+            </div>
+        </div>
+        <textarea id="commentText" class="comment-textarea" placeholder="Share your opinion about this battle..." maxlength="300"></textarea>
+        <div class="comment-form-bottom">
+            <span class="comment-chars" id="commentChars">0/300</span>
+            <button class="comment-submit-btn" onclick="submitComment()">
+                🚀 POST COMMENT
+            </button>
+        </div>
+    </div>
+
+    <!-- Comments List -->
+    <div class="comments-list" id="commentsList">
+        <div class="no-comments" id="noComments">
+            <p>🎮 Be the first to comment on this battle!</p>
+        </div>
+    </div>
+</div>
+
+        </main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-logo">GAME<span>VS</span></p>
+        <p class="footer-text">© 2026 GameVS. All Rights Reserved.</p>
+        <p class="footer-sub">Designed & Developed with ❤️ for Gamers</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="scripts.js"></script>
+</body>
+
+<!-- Loading Screen -->
+<div class="loader-screen" id="loaderScreen">
+    <div class="loader-bg"></div>
+    <div class="loader-content">
+        <div class="loader-logo">
+            <span class="loader-game">GAME</span>
+            <span class="loader-vs">VS</span>
+        </div>
+        <div class="loader-subtitle">ULTIMATE GAME BATTLE ARENA</div>
+        <div class="loader-bar-container">
+            <div class="loader-bar" id="loaderBar"></div>
+        </div>
+        <div class="loader-percent" id="loaderPercent">0%</div>
+        <div class="loader-tip" id="loaderTip">⚔️ Preparing the battlefield...</div>
+    </div>
+    <div class="loader-particles" id="loaderParticles"></div>
+</div>
+</html>

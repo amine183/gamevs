@@ -1081,3 +1081,172 @@ body.rtl .lang-switcher { right: auto; left: 20px; }
     transform: scale(1.05);
     display: inline-block;
 }
+
+/* ===== COMMUNITY VOTE ===== */
+.vote-section {
+    position: relative;
+    z-index: 10;
+    background: var(--card-bg);
+    border: 1px solid rgba(123,47,255,0.3);
+    border-radius: 20px;
+    padding: 35px 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 0.6s ease;
+}
+.vote-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: var(--purple-light);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+.vote-subtitle {
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.vote-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.vote-btn {
+    flex: 1;
+    min-width: 180px;
+    max-width: 280px;
+    padding: 20px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+.vote-btn-red {
+    background: rgba(255,45,85,0.1);
+    border-color: rgba(255,45,85,0.3);
+    color: #ff6b8a;
+}
+.vote-btn-red:hover {
+    background: rgba(255,45,85,0.2);
+    border-color: var(--red);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255,45,85,0.3);
+}
+.vote-btn-green {
+    background: rgba(0,255,136,0.1);
+    border-color: rgba(0,255,136,0.3);
+    color: #00ff88;
+}
+.vote-btn-green:hover {
+    background: rgba(0,255,136,0.2);
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,255,136,0.3);
+}
+.vote-btn.voted {
+    transform: scale(0.97);
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.vote-btn.voted-selected {
+    transform: scale(1.03);
+    opacity: 1;
+    cursor: not-allowed;
+}
+.vote-btn-red.voted-selected {
+    border-color: var(--red);
+    background: rgba(255,45,85,0.25);
+    box-shadow: 0 0 30px rgba(255,45,85,0.4);
+}
+.vote-btn-green.voted-selected {
+    border-color: var(--green);
+    background: rgba(0,255,136,0.25);
+    box-shadow: 0 0 30px rgba(0,255,136,0.4);
+}
+.vote-btn-icon { font-size: 30px; }
+.vote-btn-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+}
+.vote-btn-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+.vote-vs-divider {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--purple);
+    text-shadow: 0 0 20px var(--purple);
+    flex-shrink: 0;
+}
+
+/* Vote Results */
+.vote-results {
+    margin-top: 25px;
+    animation: fadeInUp 0.5s ease;
+}
+.vote-bar-container {
+    max-width: 600px;
+    margin: 0 auto 15px;
+}
+.vote-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+}
+.vote-track {
+    width: 100%;
+    height: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.vote-fill-red {
+    height: 100%;
+    background: linear-gradient(90deg, var(--red), #ff6b8a);
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease;
+}
+.vote-fill-green {
+    height: 100%;
+    background: linear-gradient(90deg, #00cc6a, var(--green));
+    border-radius: 0 10px 10px 0;
+    transition: width 1s ease;
+}
+.vote-count {
+    color: rgba(255,255,255,0.4);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.vote-winner-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--purple), var(--red));
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 2px;
+    min-height: 30px;
+}

@@ -676,6 +676,7 @@ document.getElementById('buyButtons').innerHTML = `
     });
 
     currentBattle = `${game1.name} vs ${game2.name}`;
+    initVote(game1, game2);
 
     playWinnerSound();
     const results = document.getElementById('results');
@@ -801,6 +802,97 @@ function resetBattle() {
     }, 600);
 }
 // ===== END RESET BATTLE =====
+
+// ===== COMMUNITY VOTE =====
+let voteData = { votes1: 0, votes2: 0, userVoted: false };
+let voteGame1Name = '';
+let voteGame2Name = '';
+
+function initVote(game1, game2) {
+    voteData = { votes1: 0, votes2: 0, userVoted: false };
+    voteGame1Name = game1.name;
+    voteGame2Name = game2.name;
+
+    // Set button names
+    document.getElementById('voteName1').textContent = game1.name;
+    document.getElementById('voteName2').textContent = game2.name;
+    document.getElementById('voteLabel1').textContent = game1.name;
+    document.getElementById('voteLabel2').textContent = game2.name;
+
+    // Reset buttons
+    const btn1 = document.getElementById('voteBtn1');
+    const btn2 = document.getElementById('voteBtn2');
+    btn1.classList.remove('voted', 'voted-selected');
+    btn2.classList.remove('voted', 'voted-selected');
+    btn1.disabled = false;
+    btn2.disabled = false;
+
+    // Hide results
+    document.getElementById('voteResults').style.display = 'none';
+    document.getElementById('voteFill1').style.width = '0%';
+    document.getElementById('voteFill2').style.width = '0%';
+    document.getElementById('voteWinnerTag').textContent = '';
+
+    // Show vote section
+    document.getElementById('voteSection').style.display = 'block';
+}
+
+function castVote(choice) {
+    if (voteData.userVoted) return;
+    voteData.userVoted = true;
+
+    // Add some random community votes for realism
+    const randomBase = Math.floor(Math.random() * 40) + 10;
+    const randomSplit = Math.floor(Math.random() * 30) + 35;
+
+    if (choice === 1) {
+        voteData.votes1 = randomSplit + Math.floor(Math.random() * 10);
+        voteData.votes2 = 100 - voteData.votes1;
+        voteData.votes1++;
+    } else {
+        voteData.votes2 = randomSplit + Math.floor(Math.random() * 10);
+        voteData.votes1 = 100 - voteData.votes2;
+        voteData.votes2++;
+    }
+
+    const total = voteData.votes1 + voteData.votes2;
+    const pct1 = Math.round((voteData.votes1 / total) * 100);
+    const pct2 = 100 - pct1;
+
+    // Style buttons
+    const btn1 = document.getElementById('voteBtn1');
+    const btn2 = document.getElementById('voteBtn2');
+
+    if (choice === 1) {
+        btn1.classList.add('voted-selected');
+        btn2.classList.add('voted');
+    } else {
+        btn2.classList.add('voted-selected');
+        btn1.classList.add('voted');
+    }
+    btn1.disabled = true;
+    btn2.disabled = true;
+
+    // Show results
+    const results = document.getElementById('voteResults');
+    results.style.display = 'block';
+
+    // Animate bars
+    setTimeout(() => {
+        document.getElementById('voteFill1').style.width = pct1 + '%';
+        document.getElementById('voteFill2').style.width = pct2 + '%';
+        document.getElementById('votePct1').textContent = pct1 + '%';
+        document.getElementById('votePct2').textContent = pct2 + '%';
+        document.getElementById('voteCount').textContent = total + ' votes';
+
+        const communityWinner = pct1 > pct2 ? voteGame1Name : voteGame2Name;
+        document.getElementById('voteWinnerTag').textContent =
+            `🏆 Community favorite: ${communityWinner}`;
+    }, 100);
+
+    playHoverSound();
+}
+// ===== END COMMUNITY VOTE =====
 
 // ===== COMMENT SECTION =====
 let comments = [];

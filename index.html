@@ -129,6 +129,43 @@
                                 <div id="buyButtons"></div>
                 </div>
 
+                <!-- Community Vote -->
+<div class="vote-section" id="voteSection" style="display:none;">
+    <h3 class="vote-title">🗳️ COMMUNITY VOTE</h3>
+    <p class="vote-subtitle">Which game do YOU prefer?</p>
+    <div class="vote-buttons" id="voteButtons">
+        <button class="vote-btn vote-btn-red" id="voteBtn1" onclick="castVote(1)">
+            <span class="vote-btn-icon">🔴</span>
+            <span class="vote-btn-name" id="voteName1">Game 1</span>
+            <span class="vote-btn-label">I PREFER THIS</span>
+        </button>
+        <div class="vote-vs-divider">VS</div>
+        <button class="vote-btn vote-btn-green" id="voteBtn2" onclick="castVote(2)">
+            <span class="vote-btn-icon">🟢</span>
+            <span class="vote-btn-name" id="voteName2">Game 2</span>
+            <span class="vote-btn-label">I PREFER THIS</span>
+        </button>
+    </div>
+    <div class="vote-results" id="voteResults" style="display:none;">
+        <div class="vote-bar-container">
+            <div class="vote-bar-label">
+                <span id="voteLabel1">Game 1</span>
+                <span id="votePct1">0%</span>
+            </div>
+            <div class="vote-track">
+                <div class="vote-fill-red" id="voteFill1" style="width:0%"></div>
+                <div class="vote-fill-green" id="voteFill2" style="width:0%"></div>
+            </div>
+            <div class="vote-bar-label">
+                <span id="voteLabel2">Game 2</span>
+                <span id="votePct2">0%</span>
+            </div>
+        </div>
+        <div class="vote-count" id="voteCount">0 votes</div>
+        <div class="vote-winner-tag" id="voteWinnerTag"></div>
+    </div>
+</div>
+
             <!-- Comparison table -->
                 <div class="comparison-grid" id="comparisonGrid"></div>
 
@@ -155,26 +192,43 @@
 </div>
 
                 </div>
-          <!-- Comment Section -->
+        <!-- Comment Section -->
 <div class="comments-section" id="commentsSection">
     <div class="comments-header">
         <h3 class="comments-title">💬 <span data-i18n="commentsTitle">BATTLE COMMENTS</span></h3>
+        <span class="comments-count" id="commentsCount">0 comments</span>
     </div>
-    <script src="https://giscus.app/client.js"
-            data-repo="amine183/gamevs"
-            data-repo-id="R_kgDOSd82iA"
-            data-category="Announcements"
-            data-category-id="DIC_kwDOSd82iM4C9FvN"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="dark_dimmed"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-    </script>
+
+    <!-- Add Comment Form -->
+    <div class="comment-form">
+        <div class="comment-form-top">
+            <input type="text" id="commentName" class="comment-input" placeholder="Your name..." maxlength="30">
+            <div class="comment-rating-select">
+                <span>Rate the battle:</span>
+                <div class="star-select" id="starSelect">
+                    <span class="star-opt" data-val="1">⭐</span>
+                    <span class="star-opt" data-val="2">⭐</span>
+                    <span class="star-opt" data-val="3">⭐</span>
+                    <span class="star-opt" data-val="4">⭐</span>
+                    <span class="star-opt" data-val="5">⭐</span>
+                </div>
+            </div>
+        </div>
+        <textarea id="commentText" class="comment-textarea" placeholder="Share your opinion about this battle..." maxlength="300"></textarea>
+        <div class="comment-form-bottom">
+            <span class="comment-chars" id="commentChars">0/300</span>
+            <button class="comment-submit-btn" onclick="submitComment()">
+                🚀 POST COMMENT
+            </button>
+        </div>
+    </div>
+
+    <!-- Comments List -->
+    <div class="comments-list" id="commentsList">
+        <div class="no-comments" id="noComments">
+            <p>🎮 Be the first to comment on this battle!</p>
+        </div>
+    </div>
 </div>
 
         </main>

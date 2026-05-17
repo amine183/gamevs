@@ -360,6 +360,190 @@ const gameDatabase = [
     { name: "Attack on Titan 2", graphics: 82, gameplay: 82, story: 80, price: 25, multiplayer: 50, performance: 85, sound: 83, replayability: 72 },
     { name: "Demon Slayer Hinokami Chronicles", graphics: 90, gameplay: 80, story: 78, price: 40, multiplayer: 75, performance: 88, sound: 87, replayability: 70 },
     { name: "Blue Protocol", graphics: 88, gameplay: 80, story: 72, price: 0, multiplayer: 88, performance: 82, sound: 85, replayability: 75 },
+
+    // ===== GTA 6 & UPCOMING =====
+    { name: "GTA 6", graphics: 99, gameplay: 98, story: 95, price: 70, multiplayer: 99, performance: 90, sound: 97, replayability: 99 },
+    { name: "Elder Scrolls 6", graphics: 96, gameplay: 95, story: 96, price: 70, multiplayer: 30, performance: 88, sound: 93, replayability: 97 },
+
+    // ===== CALL OF DUTY MISSING =====
+    { name: "Call of Duty Modern Warfare 3", graphics: 90, gameplay: 86, story: 74, price: 70, multiplayer: 92, performance: 89, sound: 88, replayability: 75 },
+    { name: "Call of Duty Advanced Warfare", graphics: 84, gameplay: 85, story: 80, price: 15, multiplayer: 87, performance: 90, sound: 85, replayability: 72 },
+    { name: "Call of Duty Black Ops 4", graphics: 87, gameplay: 85, story: 60, price: 20, multiplayer: 90, performance: 90, sound: 85, replayability: 78 },
+
+    // ===== ASSASSIN'S CREED MISSING =====
+    { name: "Assassin's Creed 3", graphics: 78, gameplay: 84, story: 82, price: 10, multiplayer: 30, performance: 87, sound: 83, replayability: 72 },
+    { name: "Assassin's Creed Unity", graphics: 88, gameplay: 82, story: 80, price: 10, multiplayer: 40, performance: 78, sound: 84, replayability: 70 },
+    { name: "Assassin's Creed Syndicate", graphics: 86, gameplay: 83, story: 80, price: 10, multiplayer: 10, performance: 85, sound: 83, replayability: 70 },
+    { name: "Assassin's Creed Revelations", graphics: 74, gameplay: 83, story: 85, price: 10, multiplayer: 25, performance: 88, sound: 83, replayability: 72 },
+
+    // ===== RESIDENT EVIL MISSING =====
+    { name: "Resident Evil 5", graphics: 78, gameplay: 85, story: 75, price: 15, multiplayer: 60, performance: 90, sound: 82, replayability: 75 },
+    { name: "Resident Evil 6", graphics: 80, gameplay: 80, story: 72, price: 15, multiplayer: 65, performance: 88, sound: 80, replayability: 70 },
+    { name: "Resident Evil Zero", graphics: 72, gameplay: 78, story: 78, price: 15, multiplayer: 10, performance: 90, sound: 82, replayability: 68 },
+    { name: "Resident Evil Code Veronica", graphics: 65, gameplay: 76, story: 80, price: 10, multiplayer: 10, performance: 90, sound: 80, replayability: 65 },
+
+    // ===== METAL GEAR SERIES =====
+    { name: "Metal Gear Solid 2", graphics: 68, gameplay: 90, story: 92, price: 15, multiplayer: 10, performance: 92, sound: 90, replayability: 82 },
+    { name: "Metal Gear Solid 3", graphics: 70, gameplay: 92, story: 95, price: 15, multiplayer: 10, performance: 92, sound: 92, replayability: 85 },
+    { name: "Metal Gear Solid 4", graphics: 80, gameplay: 88, story: 90, price: 15, multiplayer: 10, performance: 90, sound: 90, replayability: 78 },
+
+    // ===== DEVIL MAY CRY SERIES =====
+    { name: "Devil May Cry 4", graphics: 78, gameplay: 90, story: 75, price: 15, multiplayer: 10, performance: 93, sound: 87, replayability: 82 },
+    { name: "Devil May Cry 1", graphics: 55, gameplay: 85, story: 78, price: 10, multiplayer: 10, performance: 92, sound: 84, replayability: 78 },
+    { name: "DmC Devil May Cry", graphics: 82, gameplay: 86, story: 72, price: 15, multiplayer: 10, performance: 90, sound: 85, replayability: 72 },
+
+    // ===== BATMAN SERIES =====
+    { name: "Batman Arkham Asylum", graphics: 80, gameplay: 90, story: 88, price: 10, multiplayer: 10, performance: 92, sound: 88, replayability: 78 },
+    { name: "Batman Arkham Origins", graphics: 82, gameplay: 86, story: 84, price: 10, multiplayer: 30, performance: 88, sound: 85, replayability: 72 },
+
+    // ===== FAR CRY SERIES =====
+    { name: "Far Cry 3", graphics: 82, gameplay: 88, story: 85, price: 10, multiplayer: 50, performance: 88, sound: 83, replayability: 78 },
+    { name: "Far Cry 4", graphics: 85, gameplay: 85, story: 80, price: 15, multiplayer: 50, performance: 87, sound: 82, replayability: 75 },
+    { name: "Far Cry Primal", graphics: 84, gameplay: 80, story: 75, price: 15, multiplayer: 10, performance: 86, sound: 82, replayability: 68 },
+    { name: "Far Cry New Dawn", graphics: 83, gameplay: 80, story: 72, price: 15, multiplayer: 10, performance: 85, sound: 78, replayability: 65 },
+
+    // ===== BIOSHOCK SERIES =====
+    { name: "Bioshock 1", graphics: 78, gameplay: 88, story: 96, price: 10, multiplayer: 10, performance: 90, sound: 92, replayability: 78 },
+    { name: "Bioshock 2", graphics: 80, gameplay: 86, story: 88, price: 10, multiplayer: 35, performance: 90, sound: 88, replayability: 72 },
+
+    // ===== MASS EFFECT SERIES =====
+    { name: "Mass Effect 1", graphics: 75, gameplay: 82, story: 96, price: 10, multiplayer: 10, performance: 85, sound: 88, replayability: 85 },
+    { name: "Mass Effect 2", graphics: 80, gameplay: 88, story: 97, price: 10, multiplayer: 10, performance: 87, sound: 90, replayability: 90 },
+    { name: "Mass Effect 3", graphics: 83, gameplay: 87, story: 90, price: 10, multiplayer: 40, performance: 87, sound: 90, replayability: 85 },
+    { name: "Mass Effect Andromeda", graphics: 85, gameplay: 80, story: 75, price: 15, multiplayer: 35, performance: 82, sound: 82, replayability: 70 },
+
+    // ===== DRAGON AGE SERIES =====
+    { name: "Dragon Age Origins", graphics: 70, gameplay: 88, story: 95, price: 10, multiplayer: 10, performance: 85, sound: 87, replayability: 88 },
+    { name: "Dragon Age 2", graphics: 74, gameplay: 80, story: 82, price: 10, multiplayer: 10, performance: 87, sound: 83, replayability: 72 },
+
+    // ===== DARK SOULS / FROMSOFTWARE =====
+    { name: "Demon's Souls Remake", graphics: 94, gameplay: 90, story: 82, price: 50, multiplayer: 40, performance: 92, sound: 90, replayability: 82 },
+    { name: "Armored Core 4", graphics: 65, gameplay: 82, story: 70, price: 10, multiplayer: 50, performance: 88, sound: 78, replayability: 75 },
+
+    // ===== SOULSLIKE =====
+    { name: "Nioh 2", graphics: 85, gameplay: 90, story: 72, price: 30, multiplayer: 45, performance: 88, sound: 82, replayability: 88 },
+    { name: "Code Vein", graphics: 82, gameplay: 80, story: 78, price: 20, multiplayer: 40, performance: 85, sound: 80, replayability: 72 },
+    { name: "Wo Long Fallen Dynasty", graphics: 85, gameplay: 86, story: 74, price: 50, multiplayer: 40, performance: 83, sound: 80, replayability: 75 },
+    { name: "Star Wars Jedi Fallen Order", graphics: 88, gameplay: 84, story: 85, price: 25, multiplayer: 10, performance: 83, sound: 88, replayability: 72 },
+    { name: "Star Wars Jedi Survivor", graphics: 90, gameplay: 87, story: 86, price: 60, multiplayer: 10, performance: 80, sound: 90, replayability: 75 },
+
+    // ===== SPORTS MISSING =====
+    { name: "FIFA 20", graphics: 82, gameplay: 79, story: 22, price: 10, multiplayer: 89, performance: 87, sound: 74, replayability: 79 },
+    { name: "FIFA 19", graphics: 80, gameplay: 78, story: 20, price: 10, multiplayer: 87, performance: 86, sound: 72, replayability: 77 },
+    { name: "EA Sports FC 24", graphics: 90, gameplay: 83, story: 32, price: 70, multiplayer: 93, performance: 89, sound: 79, replayability: 83 },
+    { name: "NBA 2K24", graphics: 91, gameplay: 86, story: 62, price: 60, multiplayer: 88, performance: 87, sound: 83, replayability: 82 },
+    { name: "WWE 2K23", graphics: 88, gameplay: 82, story: 70, price: 60, multiplayer: 78, performance: 85, sound: 80, replayability: 78 },
+    { name: "Rocket League", graphics: 82, gameplay: 90, story: 10, price: 0, multiplayer: 97, performance: 96, sound: 78, replayability: 95 },
+    { name: "eFootball 2024", graphics: 85, gameplay: 80, story: 10, price: 0, multiplayer: 85, performance: 87, sound: 72, replayability: 75 },
+
+    // ===== RACING =====
+    { name: "Need for Speed Most Wanted", graphics: 70, gameplay: 88, story: 78, price: 10, multiplayer: 70, performance: 92, sound: 85, replayability: 82 },
+    { name: "Need for Speed Underground 2", graphics: 60, gameplay: 88, story: 70, price: 10, multiplayer: 55, performance: 93, sound: 87, replayability: 82 },
+    { name: "Burnout Paradise", graphics: 72, gameplay: 88, story: 30, price: 10, multiplayer: 80, performance: 93, sound: 82, replayability: 80 },
+    { name: "The Crew 2", graphics: 85, gameplay: 78, story: 50, price: 20, multiplayer: 80, performance: 83, sound: 75, replayability: 72 },
+    { name: "Forza Motorsport 8", graphics: 95, gameplay: 88, story: 40, price: 60, multiplayer: 75, performance: 88, sound: 87, replayability: 82 },
+
+    // ===== HORROR MISSING =====
+    { name: "Alan Wake 1", graphics: 75, gameplay: 80, story: 88, price: 10, multiplayer: 10, performance: 88, sound: 88, replayability: 70 },
+    { name: "SOMA", graphics: 80, gameplay: 78, story: 95, price: 15, multiplayer: 10, performance: 90, sound: 90, replayability: 65 },
+    { name: "Alien Isolation", graphics: 85, gameplay: 82, story: 85, price: 15, multiplayer: 10, performance: 88, sound: 93, replayability: 72 },
+    { name: "The Evil Within", graphics: 80, gameplay: 82, story: 78, price: 15, multiplayer: 10, performance: 82, sound: 83, replayability: 70 },
+    { name: "The Evil Within 2", graphics: 84, gameplay: 85, story: 82, price: 20, multiplayer: 10, performance: 85, sound: 85, replayability: 72 },
+    { name: "Layers of Fear", graphics: 80, gameplay: 72, story: 85, price: 15, multiplayer: 10, performance: 90, sound: 88, replayability: 60 },
+
+    // ===== STEALTH =====
+    { name: "Dishonored", graphics: 80, gameplay: 90, story: 82, price: 10, multiplayer: 10, performance: 90, sound: 85, replayability: 85 },
+    { name: "Dishonored 2", graphics: 85, gameplay: 92, story: 83, price: 15, multiplayer: 10, performance: 87, sound: 86, replayability: 87 },
+    { name: "Hitman 3", graphics: 88, gameplay: 92, story: 78, price: 30, multiplayer: 10, performance: 88, sound: 85, replayability: 92 },
+    { name: "Hitman 2", graphics: 85, gameplay: 90, story: 75, price: 20, multiplayer: 10, performance: 87, sound: 83, replayability: 90 },
+    { name: "Splinter Cell Blacklist", graphics: 80, gameplay: 87, story: 78, price: 15, multiplayer: 55, performance: 87, sound: 83, replayability: 78 },
+
+    // ===== ADVENTURE =====
+    { name: "Red Dead Revolver", graphics: 50, gameplay: 78, story: 75, price: 10, multiplayer: 10, performance: 90, sound: 78, replayability: 65 },
+    { name: "LA Noire", graphics: 78, gameplay: 80, story: 88, price: 15, multiplayer: 10, performance: 85, sound: 85, replayability: 68 },
+    { name: "Bully", graphics: 60, gameplay: 85, story: 85, price: 10, multiplayer: 10, performance: 92, sound: 82, replayability: 80 },
+    { name: "Midnight Club LA", graphics: 62, gameplay: 82, story: 60, price: 10, multiplayer: 70, performance: 90, sound: 80, replayability: 72 },
+
+    // ===== OPEN WORLD MISSING =====
+    { name: "Watch Dogs", graphics: 82, gameplay: 78, story: 75, price: 10, multiplayer: 55, performance: 80, sound: 78, replayability: 65 },
+    { name: "Watch Dogs Legion", graphics: 88, gameplay: 78, story: 72, price: 20, multiplayer: 60, performance: 80, sound: 76, replayability: 65 },
+    { name: "Just Cause 3", graphics: 84, gameplay: 82, story: 62, price: 10, multiplayer: 10, performance: 80, sound: 76, replayability: 72 },
+    { name: "Prototype", graphics: 70, gameplay: 82, story: 72, price: 10, multiplayer: 10, performance: 88, sound: 75, replayability: 70 },
+    { name: "inFamous Second Son", graphics: 90, gameplay: 84, story: 78, price: 15, multiplayer: 10, performance: 90, sound: 82, replayability: 70 },
+
+    // ===== NINTENDO MISSING =====
+    { name: "Bayonetta 3", graphics: 88, gameplay: 94, story: 75, price: 60, multiplayer: 10, performance: 92, sound: 88, replayability: 82 },
+    { name: "Pikmin 4", graphics: 88, gameplay: 88, story: 72, price: 60, multiplayer: 30, performance: 98, sound: 86, replayability: 80 },
+    { name: "Xenoblade Chronicles 3", graphics: 85, gameplay: 88, story: 90, price: 60, multiplayer: 10, performance: 85, sound: 93, replayability: 85 },
+    { name: "Pokemon Sword Shield", graphics: 78, gameplay: 82, story: 72, price: 60, multiplayer: 72, performance: 80, sound: 85, replayability: 78 },
+    { name: "Luigi Mansion 3", graphics: 88, gameplay: 86, story: 70, price: 60, multiplayer: 55, performance: 99, sound: 87, replayability: 72 },
+    { name: "Donkey Kong Country Returns", graphics: 82, gameplay: 88, story: 60, price: 40, multiplayer: 55, performance: 99, sound: 87, replayability: 78 },
+
+    // ===== INDIE MISSING =====
+    { name: "Terraria", graphics: 65, gameplay: 92, story: 40, price: 10, multiplayer: 85, performance: 99, sound: 78, replayability: 97 },
+    { name: "Stardew Valley", graphics: 70, gameplay: 88, story: 72, price: 15, multiplayer: 65, performance: 99, sound: 82, replayability: 96 },
+    { name: "Dead Cells", graphics: 82, gameplay: 92, story: 65, price: 25, multiplayer: 10, performance: 99, sound: 84, replayability: 92 },
+    { name: "Shovel Knight", graphics: 78, gameplay: 88, story: 72, price: 15, multiplayer: 30, performance: 99, sound: 88, replayability: 82 },
+    { name: "Undertale", graphics: 55, gameplay: 82, story: 96, price: 10, multiplayer: 10, performance: 99, sound: 92, replayability: 88 },
+    { name: "Disco Elysium", graphics: 80, gameplay: 78, story: 99, price: 25, multiplayer: 10, performance: 88, sound: 88, replayability: 85 },
+    { name: "Outer Wilds", graphics: 78, gameplay: 85, story: 96, price: 25, multiplayer: 10, performance: 90, sound: 90, replayability: 72 },
+    { name: "Return of the Obra Dinn", graphics: 80, gameplay: 85, story: 95, price: 20, multiplayer: 10, performance: 99, sound: 88, replayability: 68 },
+    { name: "Tunic", graphics: 82, gameplay: 84, story: 82, price: 30, multiplayer: 10, performance: 97, sound: 86, replayability: 72 },
+
+    // ===== FIGHTING MISSING =====
+    { name: "Mortal Kombat 9", graphics: 80, gameplay: 87, story: 85, price: 10, multiplayer: 83, performance: 90, sound: 84, replayability: 78 },
+    { name: "Injustice 2", graphics: 88, gameplay: 86, story: 82, price: 15, multiplayer: 82, performance: 90, sound: 85, replayability: 80 },
+    { name: "Injustice Gods Among Us", graphics: 82, gameplay: 84, story: 80, price: 10, multiplayer: 80, performance: 88, sound: 82, replayability: 75 },
+    { name: "Soulcalibur 6", graphics: 88, gameplay: 86, story: 70, price: 20, multiplayer: 82, performance: 90, sound: 84, replayability: 78 },
+    { name: "King of Fighters XV", graphics: 85, gameplay: 88, story: 70, price: 40, multiplayer: 82, performance: 91, sound: 82, replayability: 78 },
+    { name: "Granblue Fantasy Versus", graphics: 90, gameplay: 82, story: 72, price: 30, multiplayer: 78, performance: 92, sound: 86, replayability: 72 },
+
+    // ===== STRATEGY MISSING =====
+    { name: "Total War Warhammer 2", graphics: 85, gameplay: 89, story: 70, price: 30, multiplayer: 62, performance: 78, sound: 83, replayability: 90 },
+    { name: "Stellaris", graphics: 72, gameplay: 90, story: 65, price: 30, multiplayer: 72, performance: 82, sound: 78, replayability: 96 },
+    { name: "Hearts of Iron 4", graphics: 68, gameplay: 88, story: 65, price: 35, multiplayer: 75, performance: 85, sound: 72, replayability: 95 },
+    { name: "Crusader Kings 3", graphics: 72, gameplay: 90, story: 72, price: 40, multiplayer: 60, performance: 85, sound: 75, replayability: 97 },
+    { name: "Anno 1800", graphics: 88, gameplay: 86, story: 60, price: 40, multiplayer: 55, performance: 80, sound: 78, replayability: 90 },
+
+    // ===== MMO =====
+    { name: "World of Warcraft", graphics: 75, gameplay: 85, story: 80, price: 15, multiplayer: 98, performance: 90, sound: 82, replayability: 95 },
+    { name: "Final Fantasy XIV", graphics: 85, gameplay: 84, story: 92, price: 15, multiplayer: 95, performance: 87, sound: 95, replayability: 92 },
+    { name: "Guild Wars 2", graphics: 80, gameplay: 82, story: 78, price: 0, multiplayer: 92, performance: 88, sound: 82, replayability: 88 },
+    { name: "Lost Ark", graphics: 85, gameplay: 82, story: 72, price: 0, multiplayer: 90, performance: 80, sound: 80, replayability: 82 },
+    { name: "Black Desert Online", graphics: 92, gameplay: 80, story: 65, price: 10, multiplayer: 85, performance: 78, sound: 78, replayability: 78 },
+
+    // ===== CLASSIC XBOX =====
+    { name: "Halo Combat Evolved", graphics: 65, gameplay: 90, story: 85, price: 10, multiplayer: 90, performance: 92, sound: 88, replayability: 88 },
+    { name: "Halo 4", graphics: 85, gameplay: 88, story: 82, price: 10, multiplayer: 85, performance: 90, sound: 88, replayability: 82 },
+    { name: "Halo 5 Guardians", graphics: 88, gameplay: 87, story: 72, price: 10, multiplayer: 87, performance: 90, sound: 86, replayability: 78 },
+    { name: "Gears of War 4", graphics: 90, gameplay: 85, story: 78, price: 20, multiplayer: 82, performance: 88, sound: 85, replayability: 75 },
+    { name: "Gears 5", graphics: 92, gameplay: 87, story: 80, price: 25, multiplayer: 82, performance: 89, sound: 87, replayability: 75 },
+    { name: "Gears of War 3", graphics: 80, gameplay: 88, story: 85, price: 15, multiplayer: 88, performance: 90, sound: 87, replayability: 82 },
+
+    // ===== CLASSIC PS3 ERA =====
+    { name: "The Last of Us Part 1 Original", graphics: 80, gameplay: 86, story: 98, price: 10, multiplayer: 25, performance: 88, sound: 96, replayability: 70 },
+    { name: "Uncharted 3", graphics: 85, gameplay: 88, story: 88, price: 15, multiplayer: 50, performance: 90, sound: 88, replayability: 72 },
+    { name: "Infamous 1", graphics: 70, gameplay: 80, story: 78, price: 10, multiplayer: 10, performance: 88, sound: 78, replayability: 68 },
+    { name: "Infamous 2", graphics: 74, gameplay: 82, story: 80, price: 10, multiplayer: 10, performance: 88, sound: 80, replayability: 70 },
+    { name: "Killzone 2", graphics: 80, gameplay: 82, story: 72, price: 10, multiplayer: 80, performance: 87, sound: 85, replayability: 68 },
+    { name: "Resistance Fall of Man", graphics: 72, gameplay: 80, story: 75, price: 10, multiplayer: 78, performance: 88, sound: 78, replayability: 65 },
+
+    // ===== ANIME MISSING =====
+    { name: "Nier Automata", graphics: 88, gameplay: 90, story: 97, price: 25, multiplayer: 10, performance: 85, sound: 97, replayability: 90 },
+    { name: "Nier Replicant", graphics: 82, gameplay: 82, story: 94, price: 30, multiplayer: 10, performance: 85, sound: 95, replayability: 82 },
+    { name: "Dragon Quest XI", graphics: 86, gameplay: 85, story: 88, price: 30, multiplayer: 10, performance: 88, sound: 90, replayability: 82 },
+    { name: "Tales of Arise", graphics: 88, gameplay: 84, story: 82, price: 30, multiplayer: 10, performance: 87, sound: 87, replayability: 72 },
+    { name: "Scarlet Nexus", graphics: 85, gameplay: 82, story: 78, price: 30, multiplayer: 10, performance: 88, sound: 83, replayability: 68 },
+    { name: "Code Geass Lost Stories", graphics: 78, gameplay: 72, story: 82, price: 0, multiplayer: 75, performance: 80, sound: 80, replayability: 65 },
+    { name: "One Punch Man World", graphics: 80, gameplay: 72, story: 70, price: 0, multiplayer: 78, performance: 78, sound: 78, replayability: 60 },
+    { name: "My Hero Academia Ultra Rumble", graphics: 78, gameplay: 72, story: 55, price: 0, multiplayer: 82, performance: 82, sound: 78, replayability: 65 },
+
+    // ===== SURVIVAL MISSING =====
+    { name: "7 Days to Die", graphics: 72, gameplay: 80, story: 40, price: 25, multiplayer: 82, performance: 72, sound: 68, replayability: 82 },
+    { name: "The Long Dark", graphics: 80, gameplay: 82, story: 78, price: 20, multiplayer: 10, performance: 88, sound: 82, replayability: 78 },
+    { name: "Stranded Deep", graphics: 75, gameplay: 78, story: 50, price: 20, multiplayer: 50, performance: 82, sound: 70, replayability: 72 },
+    { name: "Grounded", graphics: 80, gameplay: 82, story: 68, price: 30, multiplayer: 78, performance: 85, sound: 76, replayability: 78 },
+    { name: "Sons of the Forest", graphics: 85, gameplay: 82, story: 72, price: 25, multiplayer: 72, performance: 80, sound: 78, replayability: 75 },
 ];
 
 // ============ TRANSLATIONS ============

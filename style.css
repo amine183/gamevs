@@ -1250,3 +1250,274 @@ body.rtl .lang-switcher { right: auto; left: 20px; }
     letter-spacing: 2px;
     min-height: 30px;
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    /* Header */
+    .header {
+        padding: 30px 15px 15px;
+    }
+    .logo {
+        font-size: clamp(36px, 12vw, 60px);
+    }
+    .tagline {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    /* Language switcher */
+    .lang-switcher {
+        top: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+    .lang-btn {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    /* Game of the Day */
+    .gotd-section {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    .gotd-card {
+        flex-direction: column;
+    }
+    .gotd-image-container {
+        width: 100%;
+        min-height: 180px;
+    }
+    .gotd-image-overlay {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(to bottom, transparent, rgba(5,5,8,0.95));
+    }
+    .gotd-info {
+        padding: 20px 15px;
+    }
+    .gotd-title {
+        font-size: 20px;
+    }
+    .gotd-stats {
+        gap: 6px;
+    }
+    .gotd-stat {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    /* Arena */
+    .arena {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    .game-card {
+        max-width: 100%;
+        min-width: unset;
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    /* VS Badge */
+    .vs-badge {
+        width: 70px;
+        height: 70px;
+    }
+    .vs-badge span {
+        font-size: 20px;
+    }
+
+    /* Compare Button */
+    .compare-btn {
+        padding: 14px 30px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        width: 90%;
+    }
+
+    /* Reset Button */
+    .reset-btn {
+        padding: 10px 30px;
+        font-size: 12px;
+        width: 90%;
+        margin: -30px auto 40px;
+    }
+
+    /* Main container */
+    .main-container {
+        padding: 20px 10px;
+    }
+
+    /* Winner Banner */
+    .winner-banner {
+        padding: 30px 15px;
+    }
+    .winner-crown {
+        font-size: 40px;
+    }
+    .winner-name {
+        font-size: clamp(24px, 8vw, 42px);
+    }
+    .winner-reason {
+        font-size: 14px;
+    }
+
+    /* Buy Buttons */
+    .buy-buttons-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .buy-game-box {
+        width: 100%;
+    }
+
+    /* Comparison Grid */
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .compare-row {
+        padding: 15px;
+    }
+    .bar-label {
+        width: 55px;
+        font-size: 11px;
+    }
+
+    /* Chart */
+    .chart-container {
+        padding: 20px 10px;
+    }
+    .chart-title {
+        font-size: 14px;
+    }
+
+    /* AI Verdict */
+    .verdict-box {
+        padding: 20px 15px;
+    }
+    .ai-verdict-header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .ai-verdict-header h3 {
+        font-size: 16px;
+    }
+    .ai-verdict-text {
+        font-size: 14px;
+    }
+
+    /* Community Vote */
+    .vote-section {
+        padding: 20px 15px;
+    }
+    .vote-title {
+        font-size: 16px;
+    }
+    .vote-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .vote-btn {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .vote-vs-divider {
+        font-size: 16px;
+    }
+
+    /* Comment Section */
+    .comments-section {
+        padding: 0 10px;
+    }
+    .comment-form {
+        padding: 15px;
+    }
+    .comment-form-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .comment-input {
+        width: 100%;
+    }
+    .comment-rating-select {
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+    .comment-submit-btn {
+        font-size: 10px;
+        padding: 8px 16px;
+    }
+    .comment-card {
+        padding: 15px;
+    }
+    .comment-card-top {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 15px;
+    }
+    .footer-logo {
+        font-size: 16px;
+    }
+    .footer-text {
+        font-size: 12px;
+    }
+
+    /* Loading Screen */
+    .loader-logo {
+        font-size: clamp(40px, 18vw, 80px);
+    }
+    .loader-bar-container {
+        width: 80%;
+    }
+    .loader-subtitle {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+}
+
+/* ===== VERY SMALL PHONES ===== */
+@media (max-width: 380px) {
+    .logo {
+        font-size: 32px;
+    }
+    .compare-btn {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+    .winner-name {
+        font-size: 22px;
+    }
+    .gotd-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .vote-btn-name {
+        font-size: 12px;
+    }
+}
+
+/* ===== TABLET ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .arena {
+        gap: 20px;
+    }
+    .game-card {
+        min-width: 240px;
+    }
+    .comparison-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-container {
+        padding: 30px 15px;
+    }
+}

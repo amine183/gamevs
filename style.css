@@ -1521,3 +1521,178 @@ body.rtl .lang-switcher { right: auto; left: 20px; }
         padding: 30px 15px;
     }
 }
+
+/* ===== THEME SWITCHER BUTTON ===== */
+.theme-switcher {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 1000;
+  background: rgba(0,0,0,0.4);
+  padding: 6px 12px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.theme-btn {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+
+.theme-btn.active {
+  border-color: #fff;
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===== DARK THEME (your default) ===== */
+[data-theme="dark"] {
+  --bg-main: #0d0d1a;
+  --bg-card: #13132a;
+  --accent: #a78bfa;
+  --accent2: #ec4899;
+  --text: #ffffff;
+  --text-muted: #6b6b8a;
+  --border: #2a2a4a;
+  --btn-bg: linear-gradient(90deg, #a78bfa, #ec4899);
+  --btn-text: #ffffff;
+}
+
+/* ===== RETRO PIXEL THEME ===== */
+[data-theme="retro"] {
+  --bg-main: #120c20;
+  --bg-card: #1a0a2e;
+  --accent: #00ffff;
+  --accent2: #ffff00;
+  --text: #00ffff;
+  --text-muted: #008888;
+  --border: #00ffff;
+  --btn-bg: #00ffff;
+  --btn-text: #120c20;
+}
+
+[data-theme="retro"] body {
+  image-rendering: pixelated;
+}
+
+[data-theme="retro"] .logo-game {
+  font-family: 'Courier New', monospace;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 2px 2px 0px #006666;
+  letter-spacing: 4px;
+}
+
+[data-theme="retro"] .logo-vs {
+  font-family: 'Courier New', monospace;
+  color: #ffff00;
+  text-shadow: 0 0 10px #ffff00, 2px 2px 0px #666600;
+}
+
+[data-theme="retro"] .tagline {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+  color: #00ffff88;
+}
+
+[data-theme="retro"] .game-card {
+  border: 2px solid #00ffff;
+  border-radius: 0 !important;
+  background: #1a0a2e;
+  box-shadow: 4px 4px 0px #00ffff44;
+}
+
+[data-theme="retro"] .vs-circle {
+  border-radius: 0 !important;
+  border: 3px solid #ffff00;
+  color: #ffff00;
+  text-shadow: 0 0 8px #ffff00;
+  box-shadow: 0 0 16px #ffff0044;
+}
+
+[data-theme="retro"] .start-btn {
+  border-radius: 0 !important;
+  background: #00ffff;
+  color: #120c20;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 3px;
+  border: 2px solid #ffffff;
+  box-shadow: 4px 4px 0px #006666;
+}
+
+[data-theme="retro"] .bg-particles {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,255,255,0.03) 2px,
+    rgba(0,255,255,0.03) 4px
+  );
+}
+
+/* ===== NEON MIAMI THEME ===== */
+[data-theme="miami"] {
+  --bg-main: #0a0015;
+  --bg-card: #150025;
+  --accent: #ff2d78;
+  --accent2: #00f0ff;
+  --text: #ffffff;
+  --text-muted: #aa88bb;
+  --border: #ff2d7844;
+  --btn-bg: linear-gradient(90deg, #ff2d78, #00f0ff);
+  --btn-text: #ffffff;
+}
+
+[data-theme="miami"] .logo-game {
+  color: #ff2d78;
+  text-shadow: 0 0 20px #ff2d78, 0 0 40px #ff2d7866;
+}
+
+[data-theme="miami"] .logo-vs {
+  color: #00f0ff;
+  text-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff66;
+}
+
+[data-theme="miami"] .tagline {
+  color: #ff2d7899;
+  letter-spacing: 5px;
+}
+
+[data-theme="miami"] .game-card {
+  background: #150025;
+  border: 1px solid #ff2d7833;
+  box-shadow: 0 0 30px #ff2d7811, inset 0 0 30px #00f0ff05;
+}
+
+[data-theme="miami"] .game-card:hover {
+  border-color: #ff2d78;
+  box-shadow: 0 0 40px #ff2d7844;
+}
+
+[data-theme="miami"] .vs-circle {
+  border-color: #ff2d78;
+  color: #ffffff;
+  box-shadow: 0 0 20px #ff2d78, 0 0 40px #00f0ff44;
+}
+
+[data-theme="miami"] .start-btn {
+  background: linear-gradient(90deg, #ff2d78, #00f0ff);
+  box-shadow: 0 0 30px #ff2d7866;
+}
+
+[data-theme="miami"] .bg-particles {
+  background: radial-gradient(ellipse at top, #ff2d7811 0%, transparent 70%),
+              radial-gradient(ellipse at bottom, #00f0ff11 0%, transparent 70%);
+}
+

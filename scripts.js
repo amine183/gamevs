@@ -657,6 +657,24 @@ function setLang(lang) {
     });
 }
 
+// ===== THEME SWITCHER =====
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('selectedTheme', theme);
+
+  // Update active button
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  event.target.classList.add('active');
+}
+
+// Load saved theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('selectedTheme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+});
+
 // ============ SUGGESTIONS ============
 function showSuggestions(input, boxId) {
     const val = input.value.trim().toLowerCase();
